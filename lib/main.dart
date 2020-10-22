@@ -11,13 +11,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Drawer Demo',
       theme: ThemeData(
-
           canvasColor: Colors.red,
           accentColor: Colors.blue,
           backgroundColor: Colors.greenAccent,
           brightness: Brightness.light),
           initialRoute: 'home',
-
       routes: {
         'home': (context) => Home(),
         'videos': (context) => Videos(),
