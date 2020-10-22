@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Drawer Demo',
       theme: ThemeData(
+
           canvasColor: Colors.red,
           accentColor: Colors.blue,
           backgroundColor: Colors.greenAccent,
