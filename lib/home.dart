@@ -18,10 +18,15 @@ class _HomeState extends State<Home> {
           appBar: AppBar(
             title: Text('Drawer Demo'),
             bottom: TabBar(
+              onTap: (index) {
+                print(index);
+              },
               tabs: [
                 Tab(
+
                   text: 'Tab1',
                  // icon: Icon(Icons.home),
+
                 ),
                 Tab(
                   text: 'Tab2',

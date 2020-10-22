@@ -23,7 +23,6 @@ class Info extends StatelessWidget {
                 ),
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => Details()));
-
                 }
             ),
           ],
