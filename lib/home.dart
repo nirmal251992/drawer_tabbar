@@ -6,9 +6,9 @@ import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
   @override
-  _HomeState createState() => _HomeState();
+  HomeState createState() => HomeState();
 }
-class _HomeState extends State<Home> {
+class HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -16,7 +16,7 @@ class _HomeState extends State<Home> {
       child: Scaffold(
           appBar: AppBar(
 
-            title: Text('Drawer Demo'),
+            title: Text('Home'),
             bottom: TabBar(
               onTap: (index) {
                 print(index);
@@ -46,6 +46,6 @@ class _HomeState extends State<Home> {
               About(),
             ],
           )),
-      );
+    );
   }
 }

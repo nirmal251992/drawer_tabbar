@@ -1,4 +1,7 @@
-
+import 'side_drawer.dart';
+import 'welcome.dart';
+import 'about.dart';
+import 'info.dart';
 import 'package:flutter/material.dart';
 
 class Videos extends StatefulWidget {
@@ -13,20 +16,42 @@ class _VideosState extends State<Videos> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Videos'),
-      ),
-      body: Container(
-        color: Colors.black26,
-        padding: EdgeInsets.all(16),
-        child: Center(
-          child: Text(
-            'Videos',
-            style: TextStyle(fontSize: 24),
+    return DefaultTabController(
+      length: 3,
+      child: Scaffold(
+          appBar: AppBar(
+
+            title: Text('Videos'),
+            bottom: TabBar(
+              onTap: (index) {
+                print(index);
+              },
+              tabs: [
+                Tab(
+
+                  text: 'Tab1',
+                  // icon: Icon(Icons.home),
+                ),
+                Tab(
+                  text: 'Tab2',
+                  //icon: Icon(Icons.settings),
+                ),
+                Tab(
+                  text: 'Tab3',
+                  //icon: Icon(Icons.fastfood),
+                ),
+              ],
+            ),
           ),
-        ),
-      ),
+          drawer: SideDrawer(),
+          body: TabBarView(
+            children: [
+              Welcome(),
+              Info(),
+              About(),
+            ],
+          )),
+    );
 
       // body: _tabs[_index],
       // bottomNavigationBar: BottomNavigationBar(
@@ -50,6 +75,6 @@ class _VideosState extends State<Videos> {
       //     ),
       //   ],
       // ),
-    );
+
   }
 }
