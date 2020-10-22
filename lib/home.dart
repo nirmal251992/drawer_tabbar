@@ -15,7 +15,6 @@ class HomeState extends State<Home> {
       length: 3,
       child: Scaffold(
           appBar: AppBar(
-
             title: Text('Home'),
             bottom: TabBar(
               onTap: (index) {
@@ -40,6 +39,7 @@ class HomeState extends State<Home> {
           ),
           drawer: SideDrawer(),
           body: TabBarView(
+
             children: [
               Welcome(),
               Info(),

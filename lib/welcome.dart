@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'details.dart';
+
 class Welcome extends StatelessWidget {
   const Welcome({Key key}) : super(key: key);
 
@@ -26,7 +27,6 @@ class Welcome extends StatelessWidget {
                 }
             ),
           ],
-
         ),
       ),
     );
