@@ -9,41 +9,18 @@ class Details extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 3,
-      child: Scaffold(
-          appBar: AppBar(
+    return Scaffold(
+        appBar: AppBar(
 
-            title: Text('Details Page'),
-            bottom: TabBar(
-              onTap: (index) {
-                print(index);
-              },
-              tabs: [
-                Tab(
+          title: Text('Details Page'),
 
-                  text: 'Tab1',
-                  // icon: Icon(Icons.home),
-                ),
-                Tab(
-                  text: 'Tab2',
-                  //icon: Icon(Icons.settings),
-                ),
-                Tab(
-                  text: 'Tab3',
-                  //icon: Icon(Icons.fastfood),
-                ),
-              ],
-            ),
+        ),
+
+        body: Container(
+          child: Center(
+            child: Text('Details'),
           ),
-          drawer: SideDrawer(),
-          body: TabBarView(
-            children: [
-              Welcome(),
-              Info(),
-              About(),
-            ],
-          )),
+        ),
     );
   }
 }
